@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>订购蛋糕 - CreamyCream</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">CreamyCream</div>
+            <ul class="nav-links">
+                <li><a href="index.html">首页</a></li>
+                <li><a href="order.html" class="active">订购蛋糕</a></li>
+                <li><a href="index.html#about">关于我们</a></li>
+                <li><a href="index.html#contact">联系方式</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="order-section">
+            <h1>选择您的蛋糕套餐</h1>
+            <div class="package-container">
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="经典生日蛋糕">
+                    </div>
+                    <div class="package-content">
+                        <h3>经典生日蛋糕</h3>
+                        <p class="package-description">6寸圆形蛋糕，巧克力/香草口味，奶油装饰</p>
+                        <p class="package-price">¥188</p>
+                        <button class="select-package" data-package="classic">选择此套餐</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="豪华生日蛋糕">
+                    </div>
+                    <div class="package-content">
+                        <h3>豪华生日蛋糕</h3>
+                        <p class="package-description">8寸圆形蛋糕，双层设计，水果夹心，精美装饰</p>
+                        <p class="package-price">¥288</p>
+                        <button class="select-package" data-package="deluxe">选择此套餐</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="婚礼蛋糕">
+                    </div>
+                    <div class="package-content">
+                        <h3>婚礼蛋糕</h3>
+                        <p class="package-description">三层设计，香草/巧克力口味，鲜花装饰</p>
+                        <p class="package-price">¥888</p>
+                        <button class="select-package" data-package="wedding">选择此套餐</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="儿童主题蛋糕">
+                    </div>
+                    <div class="package-content">
+                        <h3>儿童主题蛋糕</h3>
+                        <p class="package-description">6寸方形蛋糕，卡通造型，水果口味</p>
+                        <p class="package-price">¥238</p>
+                        <button class="select-package" data-package="kids">选择此套餐</button>
+                    </div>
+                </div>
+
+                <div class="package-card">
+                    <div class="package-image">
+                        <img src="https://images.unsplash.com/photo-1578985545062-69928b1d9587?ixlib=rb-1.2.1&auto=format&fit=crop&w=500&q=60" alt="纪念日蛋糕">
+                    </div>
+                    <div class="package-content">
+                        <h3>纪念日蛋糕</h3>
+                        <p class="package-description">8寸心形蛋糕，双层设计，玫瑰装饰</p>
+                        <p class="package-price">¥328</p>
+                        <button class="select-package" data-package="anniversary">选择此套餐</button>
+                    </div>
+                </div>
+            </div>
+
+            <form id="orderForm" class="order-form" style="display: none;">
+                <input type="hidden" id="selectedPackage" name="selectedPackage">
+                
+                <div class="form-group">
+                    <label for="deliveryDate">配送日期</label>
+                    <input type="date" id="deliveryDate" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerName">姓名</label>
+                    <input type="text" id="customerName" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerPhone">电话</label>
+                    <input type="tel" id="customerPhone" required>
+                </div>
+
+                <div class="form-group">
+                    <label for="customerAddress">配送地址</label>
+                    <textarea id="customerAddress" rows="3" required></textarea>
+                </div>
+
+                <div class="form-group">
+                    <label for="specialInstructions">特殊要求</label>
+                    <textarea id="specialInstructions" rows="3" placeholder="如有特殊要求请在此说明..."></textarea>
+                </div>
+
+                <button type="submit" class="submit-button">提交订单</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>CreamyCream</h3>
+                <p>让每个特别的日子都充满甜蜜</p>
+            </div>
+            <div class="footer-section">
+                <h3>营业时间</h3>
+                <p>周一至周日: 10:00 - 20:00</p>
+            </div>
+            <div class="footer-section">
+                <h3>关注我们</h3>
+                <div class="social-links">
+                    <a href="#"><i class="fab fa-weixin"></i></a>
+                    <a href="#"><i class="fab fa-weibo"></i></a>
+                    <a href="#"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 CreamyCream. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
